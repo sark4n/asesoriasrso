@@ -270,7 +270,7 @@ const Pricing = () => {
 
         <p className="mt-2 sm:mt-4">
           <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            $500.000 CLP
+            $300.000 CLP
           </strong>
 
           <span className="text-sm font-medium text-gray-700">/Mensual</span>

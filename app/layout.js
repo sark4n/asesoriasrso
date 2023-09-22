@@ -1,7 +1,11 @@
-import './globals.css'
+import Footer from './components/navigation/Footer'
+import Navbar from './components/navigation/Navbar'
+import './styles/globals.css'
 import { Inter } from 'next/font/google'
+import { Titillium_Web} from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const titillium = Titillium_Web({ subsets: ['latin'], weight:'700'})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={titillium.className}>
+        <Navbar/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }

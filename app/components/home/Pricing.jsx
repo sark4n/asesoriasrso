@@ -131,7 +131,7 @@ const Pricing = () => {
           $200.000 CLP
           </strong>
 
-          <span className="text-sm font-medium text-gray-700">/Mensual</span>
+          <span className="text-sm font-medium text-gray-700">/Mensual **</span>
         </p>
       </div>
 
@@ -257,6 +257,10 @@ const Pricing = () => {
       >
         Me interesa
       </a>
+      <span className="text-sm text-gray-300 italic font-light">
+        * Primer pago de $300.000 luego baja a $200.000/mensual.
+      <br/>** Contratación minima por 3 meses.</span>  
+      
     </div>
 {/* CONTABLE */}
     <div

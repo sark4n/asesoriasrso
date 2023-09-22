@@ -17,7 +17,7 @@ const Hero = () => {
             ¡Potencia tu presencia en línea hoy mismo!
             </p>
           
-          <Link href="/"><button className='btn-morado mr-2'>Empieza Ya</button></Link>
+          <Link href="https://wa.me/+56922491856?text=Hola,%20quisiera%20consultar%20por%20servicios."><button className='btn-morado mr-2'>Empieza Ya</button></Link>
           <Link href="/#AboutUs"><button className='btn-transp2'> Saber Mas »</button></Link>
         </div>
       </div>

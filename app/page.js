@@ -1,17 +1,4 @@
-import AboutUs from "./components/home/AboutUs";
-import Contact from "./components/home/Contact";
-import Hero from "./components/home/Hero";
-import Pricing from "./components/home/Pricing";
-import Services from "./components/home/Services";
-
-export default function Home() {
-  return (
-    <>
-      <Hero/>
-      <AboutUs/>
-      <Services/>
-      <Pricing/>
-      <Contact/>
-    </>
-  )
-}
+import HomePage from './components/HomePage';
+import { pageMetadata } from './lib/site';
+export const metadata = pageMetadata({ title: 'RSO | Software a medida, ERP e IA en Chile', description: 'Empresa chilena de TI. Desarrollamos software y ERP a medida, conectamos sistemas y aplicamos IA a procesos de negocio. Conversemos sobre tu proyecto.', path: '/' });
+export default function Home() { return <HomePage />; }

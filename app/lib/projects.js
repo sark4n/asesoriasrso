@@ -1,0 +1,67 @@
+// Descripciones basadas en los proyectos indicados por el propietario.
+// No incluir accesos, datos de operación ni métricas sin respaldo.
+export const projects = [
+  {
+    slug: 'erp-fabrica-puertas', id: 'erp-fabrica-puertas', label: 'DESARROLLO PARA UNA OPERACIÓN INDUSTRIAL',
+    title: 'ERP a medida para una fábrica de puertas', shortTitle: 'De la cotización a la producción.',
+    description: 'Un proyecto de ERP para fabricación de puertas con módulos comerciales, inventario, compras, programación, producción y despachos.',
+    summary: 'Una plataforma de gestión que reúne el recorrido comercial y operativo de una fábrica de puertas, con herramientas específicas para el seguimiento de producción.',
+    context: 'La fabricación de puertas involucra información comercial, materiales, compras y distintas etapas de trabajo. Este proyecto reúne esas áreas en una aplicación web de gestión, con módulos organizados según las tareas de la empresa.',
+    implemented: [
+      ['Gestión comercial', 'Clientes, cotizaciones y ventas dentro del sistema de gestión.'],
+      ['Materiales y abastecimiento', 'Inventario, productos, proveedores, compras y órdenes de compra.'],
+      ['Coordinación de producción', 'Notas de trabajo, programación y control de producción con registro de avance por escaneo de códigos.'],
+      ['Seguimiento operativo', 'Despachos y reportes como parte del recorrido de la operación.'],
+    ],
+    flow: ['Cotizaciones y ventas', 'Programación y producción', 'Despachos y reportes'],
+    lessonTitle: 'La herramienta sigue el recorrido de la fábrica.',
+    lesson: 'Lo que distingue a este proyecto es la relación entre las funciones comerciales y las tareas de producción. El control por escaneo es un ejemplo concreto de cómo una interfaz puede responder a una forma de trabajo industrial. La experiencia permite conversar sobre etapas, roles e información necesaria para diseñar otros sistemas operativos a medida.',
+    scopeNote: 'Presentamos las funciones del proyecto sin exponer registros, montos, clientes ni accesos de la empresa. Las mejoras de productividad requieren una medición específica y no se afirman aquí.',
+    related: 'erp-personalizado',
+    relatedLabel: 'Conoce el servicio de ERP personalizados',
+    contact: 'Hola RSO, vi el proyecto de ERP para una fábrica de puertas y me gustaría conversar sobre nuestra operación.',
+    kind: 'Cliente · ERP industrial',
+  },
+  {
+    slug: 'sarkan-vault', id: 'sarkan-vault', label: 'PROYECTO PROPIO DE SOFTWARE',
+    title: 'Sarkan Vault: una experiencia de videojuegos con ingeniería propia', shortTitle: 'De elegir un juego a disfrutarlo.',
+    seoTitle: 'Sarkan Vault: software para Windows e integración nativa',
+    description: 'Sarkan Vault, proyecto propio para Windows: biblioteca de videojuegos, navegación con mando, integración nativa, perfiles y actualizaciones. Conoce su ingeniería.',
+    summary: 'Aplicación para Windows que unifica bibliotecas de videojuegos en una experiencia visual pensada para jugar con mando. Integra perfiles, controles, descargas y actualizaciones.',
+    context: 'Entre elegir un juego y comenzar a jugar intervienen archivos, metadatos, motores de emulación, perfiles y dispositivos. Sarkan Vault coordina esas piezas desde una misma interfaz para hacer más accesible y consistente la experiencia. Es un proyecto propio de software que reúne gestión de biblioteca, preparación de componentes y funciones disponibles durante la partida.',
+    implemented: [
+      ['Biblioteca unificada y visual', 'Juegos de distintas consolas con carátulas, fichas, búsqueda, favoritos, actividad reciente y agrupación de contenido relacionado.'],
+      ['Una experiencia pensada para el mando', 'Navegación de la interfaz y acceso a funciones durante la partida desde un overlay propio, con controles adaptados a las capacidades de cada motor.'],
+      ['Integración técnica profunda', 'Desarrollos propios coordinan lanzamiento, pausa, reanudación, cierre y remapeo de controles en vivo en los motores compatibles.'],
+      ['Perfiles y multijugador', 'Preferencias por usuario y asignaciones independientes de controles para hasta cuatro jugadores en sistemas y juegos compatibles.'],
+      ['Preparación y recuperación guiadas', 'Preparación de componentes y caminos de recuperación ante problemas de lanzamiento, conexión o almacenamiento.'],
+      ['Centro de descargas integrado', 'Seguimiento centralizado de descargas, con reintentos y reanudación cuando la fuente lo permite.'],
+      ['Actualizaciones desde la aplicación', 'Distribución de versiones por un canal beta y verificación de integridad de las descargas, manteniendo separados los archivos de la aplicación y los datos personales.'],
+      ['Calidad y mantenimiento', 'Pruebas automatizadas, comprobaciones de integridad, registros de diagnóstico y validaciones de interfaz en distintas resoluciones.'],
+    ],
+    flow: ['Biblioteca y perfiles', 'Integración con motores', 'Experiencia con mando'],
+    engineering: {
+      title: 'Una solución completa, de la interfaz a Windows.',
+      text: 'El proyecto combina diseño de producto, desarrollo de interfaces y arquitectura de software con integración de componentes nativos de Windows. Electron, React y TypeScript se complementan con componentes nativos propios para funciones específicas de coordinación.',
+      stack: ['Electron', 'React', 'TypeScript', 'Windows', 'Componentes nativos propios'],
+      areas: [
+        ['Coordinación de procesos', 'Integración con motores de emulación de terceros y control de su ciclo de ejecución, según las capacidades de cada motor.'],
+        ['Persistencia y transferencias', 'Gestión de datos, preferencias y archivos junto con seguimiento de descargas, recuperación de errores y actualización de versiones.'],
+        ['Diseño de experiencia', 'Interfaz visual y navegación con mando que conectan biblioteca, configuración y funciones durante la partida.'],
+      ],
+    },
+    lessonTitle: 'La ingeniería se convierte en experiencia de uso.',
+    lesson: 'Sarkan Vault muestra cómo abordar un producto completo: una interfaz cuidada, coordinación de procesos externos, persistencia de datos, transferencias de archivos y recuperación de errores. Ese trabajo busca reducir la configuración manual y dar continuidad a la experiencia. Como proyecto de RSO, permite mostrar capacidad de desarrollo e integración tanto en la parte visible como en los componentes que hacen funcionar una aplicación.',
+    status: {
+      label: 'Desarrollo activo · Versiones beta',
+      text: 'Sarkan Vault dispone de versiones beta distribuidas mediante su propio sistema de actualización. Las funciones disponibles dependen de la plataforma, del motor y de la compatibilidad de cada juego. Las pruebas con juegos y mandos físicos forman parte del proceso de validación.',
+      distribution: 'Integra motores de emulación de terceros con desarrollos propios de interfaz y coordinación. No incluye ROMs, BIOS, claves ni firmware.',
+    },
+    scopeNote: 'Proyecto propio en evolución. No se presentan cifras de usuarios, ventas ni resultados comerciales. Las funciones descritas corresponden al trabajo documentado del proyecto.',
+    related: 'software-a-medida',
+    relatedLabel: 'Conoce el servicio de software a medida',
+    contact: 'Hola RSO, conocí Sarkan Vault y quiero conversar sobre el desarrollo de una aplicación.',
+    kind: 'Proyecto propio · Aplicación de escritorio',
+  },
+];
+export const findProject = slug => projects.find(project => project.slug === slug);

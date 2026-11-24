@@ -1,0 +1,48 @@
+.rso-logo{width:107px;height:42px;flex-shrink:0;overflow:visible;transition:width .25s ease,height .25s ease}
+.logo-connection{stroke-dasharray:52;stroke-dashoffset:0;transform-origin:center}
+.brand:hover .logo-connection,.brand:focus-visible .logo-connection{animation:logo-connect .65s ease both}
+@keyframes logo-connect{0%{stroke-dashoffset:52;opacity:.2}100%{stroke-dashoffset:0;opacity:1}}
+.header.remake-header{position:fixed;top:0;left:0;right:0;background:none;border:0;backdrop-filter:none;padding:0;pointer-events:none;z-index:40;color:#fff}
+.remake-header .nav-inner{height:100px;pointer-events:auto;position:relative;border:1px solid transparent;border-radius:0;transition:height .25s ease,background .25s ease,box-shadow .25s ease,border-color .25s ease,margin-top .25s ease,padding .25s ease,border-radius .25s ease}
+.remake-header .brand{color:#fff;gap:20px}
+.remake-header .brand-descriptor{color:#c4bfd2;border-color:#ffffff35;max-width:150px;opacity:1;padding-left:20px;transition:max-width .25s ease,opacity .2s ease,padding .25s ease,border-color .25s ease;overflow:hidden;white-space:nowrap}
+.desktop-nav{display:flex;align-items:center;gap:32px}
+.desktop-nav>a:not(.button){position:relative;color:#c7c3d3;font-size:.875rem;padding:12px 0;transition:color .2s ease}
+.desktop-nav>a:not(.button):hover,.desktop-nav>a[aria-current=location]:not(.button){color:#fff}
+.desktop-nav>a:not(.button):after{content:'';position:absolute;height:2px;left:0;right:0;bottom:3px;background:var(--lavender);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.desktop-nav>a:not(.button):hover:after,.desktop-nav>a[aria-current=location]:after{transform:scaleX(1)}
+.desktop-nav .nav-cta{min-height:44px;padding:12px 20px;gap:13px;font-size:.875rem}
+.remake-header.is-scrolled .nav-inner{height:66px;margin-top:14px;padding:0 22px;border-radius:14px;background:rgba(21,23,35,.93);border-color:#bca5ff32;backdrop-filter:blur(20px);box-shadow:0 8px 35px #0d101a26}
+.remake-header.is-scrolled .rso-logo{width:87px;height:34px}
+.remake-header.is-scrolled .brand{gap:0}
+.remake-header.is-scrolled .brand-descriptor{max-width:0;opacity:0;padding-left:0;border-color:transparent}
+.mobile-nav-actions{display:none}
+.drawer-layer{display:none}
+.hero .hero-layout{padding-top:124px;padding-bottom:40px;min-height:0}
+.footer-brand .rso-logo{width:105px;height:42px}
+@media(min-width:1600px){.hero .hero-layout{min-height:0}}
+@media(max-width:1100px){.desktop-nav{gap:24px}.remake-header .brand-descriptor{display:none}.hero .hero-layout{padding-top:120px}.remake-header .brand{gap:0}}
+@media(max-width:900px){
+ .desktop-nav{display:none}.mobile-nav-actions{display:flex;align-items:center;gap:18px}.mobile-contact{display:flex;align-items:center;gap:9px;font-size:.875rem;color:var(--lime)}
+ .remake-menu-toggle{display:flex;align-items:center;justify-content:center;gap:9px;background:none;border:1px solid #ffffff30;border-radius:6px;min-width:44px;height:44px;padding:0 12px;color:#fff}
+ .menu-label{font-size:.8125rem}.menu-lines{display:block;position:relative;width:20px;height:14px}.menu-lines i{position:absolute;width:20px;height:1.5px;background:currentColor;left:0;top:3px;transition:transform .25s ease,top .25s ease}.menu-lines i:last-child{top:11px;width:14px;left:auto;right:0}.is-open>.menu-lines i{top:7px;transform:rotate(45deg)}.is-open>.menu-lines i:last-child{width:20px;transform:rotate(-45deg)}
+ .remake-header .nav-inner{height:88px}.remake-header.is-scrolled .nav-inner{height:64px;padding-inline:18px;margin-top:10px}.remake-header .rso-logo{width:96px;height:37px}
+ .drawer-layer{display:block;position:fixed;inset:0;z-index:60;visibility:hidden;pointer-events:none;transition:visibility 0s .3s}.drawer-layer.is-open{visibility:visible;pointer-events:auto;transition-delay:0s}
+ .drawer-backdrop{position:absolute;inset:0;background:#080a13a8;backdrop-filter:blur(5px);opacity:0;transition:opacity .3s ease}.is-open>.drawer-backdrop{opacity:1}
+ .mobile-drawer{position:absolute;top:0;right:0;bottom:0;width:min(440px,90vw);background:#191b2a;color:white;border-left:1px solid #bca5ff35;padding:28px 30px 32px;overflow:auto;overscroll-behavior:contain;transform:translateX(100%);transition:transform .3s cubic-bezier(.22,.68,0,1)}
+ .is-open>.mobile-drawer{transform:translateX(0)}.drawer-top{display:flex;align-items:center;justify-content:space-between;gap:20px}.drawer-top .brand-descriptor{display:none}.drawer-top .rso-logo{width:92px;height:36px}.drawer-close{padding:0;width:44px;flex-shrink:0}.drawer-eyebrow{font-size:.75rem;letter-spacing:.1em;color:#b5abc9;margin-top:65px}.drawer-nav{display:flex;flex-direction:column;margin-top:24px}.drawer-nav>a{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:1.8rem;letter-spacing:-.04em;line-height:1.25;padding:23px 0;border-bottom:1px solid #ffffff1a;opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease,color .2s ease}.is-open .drawer-nav>a{opacity:1;transform:none;transition-delay:.08s}.is-open .drawer-nav>a:nth-child(2){transition-delay:.12s}.is-open .drawer-nav>a:nth-child(3){transition-delay:.16s}.drawer-nav>a[aria-current=location]{color:var(--lavender)}.drawer-link-symbol{color:var(--lavender);font-size:1.4rem}.drawer-cta{width:100%;margin-top:32px;font-size:.875rem}.drawer-bottom{margin-top:45px}.drawer-bottom>p{font-size:.9375rem;line-height:1.8;color:#bab4ca}.drawer-bottom>a{display:flex;align-items:center;gap:12px;font-size:.875rem;margin-top:20px}.drawer-bottom>a svg{color:var(--lime)}.drawer-bottom>span{display:block;font-size:.75rem;letter-spacing:.06em;color:#aaa1bd;margin-top:30px}
+ .hero .hero-layout{padding-top:112px;min-height:0}
+}
+@media(max-width:640px){
+ .remake-header .nav-inner{height:82px}.remake-header .rso-logo{width:85px;height:34px}.remake-header.is-scrolled .nav-inner{margin-top:8px;height:60px;padding-inline:13px;width:calc(100% - 24px);border-radius:11px}.remake-header.is-scrolled .rso-logo{width:76px;height:30px}.mobile-nav-actions{gap:12px}.remake-menu-toggle{padding:0 10px}.menu-label{display:none}.mobile-contact{font-size:.875rem}.hero .hero-layout{padding-top:104px;padding-bottom:20px;min-height:0}.drawer-eyebrow{margin-top:48px;font-size:.6875rem}.mobile-drawer{padding:24px;max-height:100dvh}.drawer-nav>a{font-size:1.55rem;padding-block:22px}.drawer-cta{margin-top:28px}.drawer-bottom{margin-top:32px}.footer-brand .rso-logo{width:92px;height:36px}
+}
+@media(prefers-reduced-motion:reduce){.remake-header *,.drawer-layer,.drawer-layer *{transition:none!important;animation:none!important}.drawer-layer:not(.is-open){visibility:hidden}}
+
+.system-core .rso-logo{width:96px;height:40px;margin-bottom:3px}
+@media(max-width:1150px){.system-core .rso-logo{width:83px;height:34px}}
+@media(max-width:900px){.system-core .rso-logo{width:73px;height:30px}}
+
+/* Acercar el contenido al navbar al navegar por secciones. */
+.section-space[id]{scroll-margin-top:-56px}
+@media(max-width:900px){.section-space[id]{scroll-margin-top:-40px}}
+@media(max-width:640px){.section-space[id]{scroll-margin-top:-36px}}

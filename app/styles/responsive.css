@@ -1,0 +1,154 @@
+/* Adaptación por ancho y altura: contenido fluido, sin recortar secciones. */
+body{--page-gutter:clamp(24px,4vw,56px)}
+body .container{width:min(1280px,calc(100% - var(--page-gutter) - var(--page-gutter)))}
+main .hero-layout>*,main .intro-layout>*,main .demo-layout>*,main .approach-layout>*,main .contact-layout>*,main .faq-layout>*,main .service-grid>*,main .form-row>*{min-width:0}
+main p,main h2,main h3,main label,main .service-detail{overflow-wrap:break-word}
+main .hero .hero-layout{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px);padding-top:clamp(112px,15svh,124px);padding-bottom:clamp(24px,4svh,40px);min-height:0}
+main .hero h1{font-size:clamp(2.75rem,min(5.7vw,9.5svh),5.4rem);line-height:1.05}
+main .hero-eyebrow{margin-bottom:clamp(16px,3svh,28px)}
+main .hero-description{margin-top:clamp(16px,3svh,28px);line-height:1.7}
+main .hero-actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:16px 22px;margin-top:clamp(20px,3.5svh,30px)}
+main .hero-note{margin-top:16px}
+main .system-visual{height:clamp(320px,55svh,480px);width:100%;max-width:560px;justify-self:center}
+main .orbit-two{width:min(385px,90%);height:auto;aspect-ratio:1}
+main .orbit-one{width:min(265px,68%);height:auto;aspect-ratio:1}
+main .hero-bottom{align-items:center;flex-wrap:wrap;row-gap:12px;padding-block:18px}
+main .hero-bottom>div{flex-wrap:wrap;gap:12px 26px}
+main .section-heading{gap:28px;align-items:flex-end}
+main .section-heading>div{min-width:0;flex:1}
+main .section-heading>p{flex:0 1 315px}
+main .service-card{display:flex;flex-direction:column}
+main .service-card>p{min-height:0}
+main .service-detail{margin-top:auto;padding-top:24px}
+main .service-action{gap:14px}
+main .service-top{gap:16px}
+main .service-tag{text-align:right;line-height:1.6}
+main .scenario-flow{display:grid;grid-template-columns:minmax(0,1fr) minmax(8px,.3fr) minmax(0,1.1fr) minmax(8px,.3fr) minmax(0,1fr);gap:4px}
+main .flow-end,main .flow-center{width:auto;min-width:0}
+main .flow-track{width:100%}
+main .flow-end>span,main .flow-center>span{max-width:100%;overflow-wrap:break-word}
+main .scenario-description p{min-height:0}
+main .contact-form input,main .contact-form textarea,main .contact-form select{min-width:0;max-width:100%}
+main .prepared-message .button{max-width:100%;white-space:normal}
+.footer .footer-bottom{flex-wrap:wrap}
+@media(min-width:901px) and (max-height:700px){
+ .remake-header .nav-inner{height:82px}
+ main .hero .hero-layout{padding-top:98px;padding-bottom:22px}
+ main .hero h1{font-size:clamp(2.5rem,min(5.3vw,8.8svh),4rem)}
+ main .hero-eyebrow{margin-bottom:14px}
+ main .hero-description{margin-top:18px;line-height:1.6}
+ main .hero-actions{margin-top:20px;gap:12px 20px}
+ main .hero-note{margin-top:12px}
+ main .system-visual{height:clamp(285px,57svh,380px)}
+ main .hero-bottom{padding-block:14px}
+}
+@media(min-width:1920px){body .container{max-width:1440px}main .system-visual{max-width:600px}main .hero h1{font-size:5.6rem}}
+@media(max-width:1100px){
+ main .demo-layout,main .approach-layout,main .contact-layout{gap:clamp(28px,4vw,60px)}
+ main .service-card{padding-inline:26px}
+ main .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}
+ main .contact-section h2{font-size:clamp(2.5rem,4.8vw,3.5rem)}
+ main .form-row{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:900px){
+ main .hero .hero-layout{grid-template-columns:minmax(0,1fr);gap:32px;padding-top:112px}
+ main .hero-copy{max-width:680px}
+ main .hero h1{font-size:clamp(2.5rem,7.5vw,4.5rem)}
+ main .hero-description{max-width:580px}
+ main .hero-actions{gap:18px 24px}
+ main .system-visual{height:360px;max-width:560px}
+ main .node-sales{top:60px}main .node-data{top:60px}main .node-ai{bottom:60px}main .node-erp{bottom:60px}
+ main .demo-layout,main .approach-layout,main .contact-layout{grid-template-columns:minmax(0,1fr);gap:32px}
+ main .demo-layout>div:first-child{max-width:none}
+ main .section-copy,main .contact-section .section-copy{max-width:650px}
+ main .contact-section h2{font-size:clamp(2.5rem,6vw,3.5rem)}
+ main .contact-section h2 br{display:none}
+ main .contact-section h2 span:before{content:' '}
+ main .contact-form{max-width:720px;width:100%}
+ main .form-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ main .section-heading{align-items:flex-start}
+ main .section-heading h2{font-size:clamp(2rem,4.3vw,3rem)}
+ .mobile-drawer{padding-bottom:max(24px,env(safe-area-inset-bottom));scroll-padding-block:24px}
+}
+@media(max-width:740px){
+ main .service-grid{grid-template-columns:minmax(0,1fr)}
+ main .section-heading{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+ main .section-heading>p{flex:auto;max-width:600px;margin-top:0}
+ main .section-heading .text-link{margin-top:0}
+ main .intro-bottom{flex-wrap:wrap;gap:24px}
+ main .service-card h3{font-size:clamp(1.8rem,5vw,2.15rem)}
+ main .service-top{margin-bottom:24px}
+ main .contact-layout{gap:28px}
+}
+@media(max-width:640px){
+ body{--page-gutter:clamp(16px,4.5vw,24px)}
+ main .hero .hero-layout{padding-top:104px;padding-bottom:20px;gap:28px}
+ main .hero h1{font-size:clamp(2rem,10vw,3.8rem);line-height:1.08}
+ main .hero-description{font-size:1rem;max-width:none;margin-top:20px}
+ main .hero-eyebrow{font-size:.625rem;letter-spacing:.06em;margin-bottom:20px}
+ main .hero-actions{gap:18px;align-items:flex-start}
+ main .hero-actions .button{font-size:.875rem;padding-inline:18px}
+ main .hero-note{font-size:.8125rem}
+ main .system-visual{height:330px}
+ main .system-node{max-width:48%;padding:11px 9px;gap:7px}
+ main .system-node strong{font-size:.625rem;line-height:1.6}
+ main .system-node span{font-size:.4375rem;letter-spacing:.03em}
+ main .node-sales,main .node-data{top:53px}
+ main .node-ai,main .node-erp{bottom:51px}
+ main .system-core{width:104px;height:104px;border-radius:24px}
+ main .hero-bottom{gap:10px;align-items:flex-start}
+ main .hero-bottom>div{gap:10px 16px}
+ main .intro-layout h2,main h2{font-size:clamp(1.85rem,7vw,2.4rem)}
+ main .service-card{padding-inline:22px}
+ main .scenario-panel{padding-inline:16px}
+ main .flow-center>svg{padding:12px;font-size:1.5rem}
+ main .scenario-flow{min-height:170px}
+ main .flow-end>span,main .flow-center>span{font-size:.625rem}
+ main .contact-section h2{font-size:clamp(2.2rem,9vw,3rem);line-height:1.15}
+ main .contact-section h2 br{display:initial}
+ main .contact-section h2 span:before{content:none}
+ main .form-row{grid-template-columns:minmax(0,1fr);gap:0}
+ main .process-grid{grid-template-columns:minmax(0,1fr);row-gap:0}
+ main .process-grid article{padding-right:0}
+ .footer .footer-top>p{max-width:55%}
+ .drawer-nav>a{overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ main .hero-actions{flex-direction:column}
+ main .service-card{padding-inline:18px}
+ main .contact-form{padding-inline:16px}
+ main .system-node>svg{font-size:.875rem}
+ main .flow-center>svg{padding:10px}
+ .mobile-nav-actions{gap:8px}
+ .mobile-contact{gap:6px}
+ .mobile-drawer{padding-inline:20px;width:94vw}
+}
+@media(max-height:540px) and (max-width:900px){
+ .mobile-drawer{padding-top:18px}
+ .drawer-eyebrow{margin-top:22px}
+ .drawer-nav{margin-top:12px}
+ .drawer-nav>a{padding-block:14px;font-size:1.3rem}
+ .drawer-cta{margin-top:20px}
+ .drawer-bottom{margin-top:24px}
+}
+@media(min-width:901px) and (max-height:700px){
+ main .node-sales,main .node-data{top:44px}
+ main .node-ai,main .node-erp{bottom:44px}
+ main .system-core{width:112px;height:112px;border-radius:24px}
+}
+@media(min-width:641px) and (max-width:900px) and (max-height:540px){
+ main .hero .hero-layout{padding-top:100px}
+ main .hero-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px 32px;max-width:none}
+ main .hero-eyebrow{grid-column:1/-1;margin:0;font-size:.625rem}
+ main .hero h1{grid-column:1;grid-row:2/5;font-size:clamp(2rem,4.8vw,2.6rem)}
+ main .hero-description{grid-column:2;margin:0;line-height:1.5}
+ main .hero-actions{grid-column:2;margin:0;gap:10px 16px}
+ main .hero-actions .button{min-height:44px;padding:12px 16px}
+ main .hero-note{grid-column:2;margin:0}
+}
+/* Completar la primera pantalla en escritorio sin alterar la composición móvil. */
+@media(min-width:901px){
+ main .hero{min-height:100svh;display:flex;flex-direction:column}
+ main .hero .hero-layout{flex:1}
+ main .hero-bottom{flex-shrink:0}
+}

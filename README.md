@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Asesorías RSO
 
-## Getting Started
+Web comercial de la pyme TI chilena RSO: software a medida, ERP, integraciones e IA. Primera propuesta local del remake orientada a conversaciones comerciales.
 
-First, run the development server:
+## Desarrollo
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://127.0.0.1:3000. Para producción: `npm run build` y luego `npm start`. Requiere Node.js, npm e internet para descargar las fuentes de Google. No requiere variables de entorno actualmente. El script lint heredado requiere configurar ESLint antes de automatizarlo.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Estructura activa
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `app/page.js`: entrada de la página.
+- `app/components/HomePage.jsx`: contenido, navegación, ejemplos y contacto.
+- `app/lib/contact.js`: teléfono comercial y constructor de enlaces a WhatsApp.
+- `app/layout.js`: idioma, fuente y metadatos.
+- `app/styles/globals.css`: sistema visual adaptable y animaciones.
+- `docs/REMAKE.md`: decisiones, verificaciones y pendientes de publicación.
 
-## Learn More
+Los componentes anteriores de home y navigation se conservan como referencia y no se usan en la ruta inicial. El formulario activo prepara una consulta para WhatsApp, sin enviar ni guardar datos en un servidor. Teléfono confirmado por el propietario: +56 9 8340 1461.
 
-To learn more about Next.js, take a look at the following resources:
+Rama de trabajo: `codex/remake-profesional`. No se publicó ni se modificaron los DNS. Revisar dependencias antes del despliegue, pues se mantiene por ahora Next.js 13.4.19.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO y páginas comerciales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `app/lib/services.js`: contenido de las cuatro páginas de servicios.
+- `app/lib/projects.js`: casos del ERP industrial y Sarkan Vault.
+- `app/servicios/[slug]/page.js` y `app/proyectos/`: páginas prerenderizadas.
+- `app/lib/site.js`: dominio, enlaces y metadatos compartidos.
+- `app/robots.js`, `app/sitemap.js`: rastreo y mapa del sitio.
+- `app/og/route.js`: tarjeta social PNG.
+- `docs/SEO.md`: implementación, fuentes, verificación y pendientes de publicación.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Las vistas previas en Vercel reciben `X-Robots-Tag: noindex` cuando `VERCEL_ENV=preview`. Revisar indexación en el dominio de producción tras publicar. No hay integración de analítica activa ni se ha solicitado indexación en herramientas externas.

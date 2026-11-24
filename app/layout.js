@@ -4,6 +4,7 @@ import './styles/responsive.css';
 import './styles/content.css';
 import { Inter } from 'next/font/google';
 import StructuredData from './components/StructuredData';
+import SiteAnalytics from './components/SiteAnalytics';
 import { SITE_URL, SITE_NAME, absoluteUrl } from './lib/site';
 import { CONTACT_PHONE } from './lib/contact';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
@@ -20,5 +21,5 @@ export default function RootLayout({ children }) {
     { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, alternateName: 'RSO', url: SITE_URL, logo: absoluteUrl('/rso-logo.svg'), telephone: `+${CONTACT_PHONE}`, description: 'Empresa chilena de tecnología: software a medida, ERP personalizados, integraciones e inteligencia artificial para empresas.', contactPoint: { '@type': 'ContactPoint', telephone: `+${CONTACT_PHONE}`, contactType: 'sales', availableLanguage: 'es' } },
     { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: SITE_URL, name: SITE_NAME, inLanguage: 'es-CL', publisher: { '@id': `${SITE_URL}/#organization` } },
   ] };
-  return <html lang="es"><body className={inter.className}><StructuredData data={identity} />{children}</body></html>;
+  return <html lang="es"><body className={inter.className}><StructuredData data={identity} />{children}<SiteAnalytics /></body></html>;
 }

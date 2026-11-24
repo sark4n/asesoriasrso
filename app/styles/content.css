@@ -78,3 +78,20 @@
 .technology-list li{padding:8px 12px;border:1px solid #65517e;border-radius:4px;font-size:.875rem;color:#ded3f2;line-height:1.5}
 .project-status{background:#eeebf5}
 .content-page .editorial-grid .project-distribution{font-size:.875rem;border-top:1px solid #d8cfe4;padding-top:20px;margin-bottom:0}
+
+/* Capturas reales con proporciones reservadas y ampliación nativa. */
+.project-card-image{margin:-30px -30px 26px;overflow:hidden;border-radius:7px 7px 0 0;background:#111827;aspect-ratio:16/10}
+.project-card-image img{display:block;width:100%;height:100%;object-fit:contain}
+.project-gallery-section{background:#eeebf5}
+.project-gallery-section h2{font-size:clamp(1.9rem,3.5vw,3rem);line-height:1.17}
+.project-gallery-intro{color:#656777;line-height:1.8;margin:18px 0 30px;max-width:720px}
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.project-shot{margin:0;min-width:0}
+.project-shot-main{grid-column:1/-1}
+.project-shot a{display:block;overflow:hidden;border:1px solid #d0cadc;border-radius:10px;background:#111827}
+.project-shot a:focus-visible{outline:3px solid var(--violet);outline-offset:5px}
+.project-shot img{display:block;width:100%;height:auto}
+.project-shot figcaption{font-size:.9rem;color:#656777;line-height:1.7;margin-top:14px}
+.project-shot figcaption span{display:block;font-size:.8rem}
+@media(max-width:740px){.project-card-image{margin:-25px -25px 24px}.project-gallery{grid-template-columns:minmax(0,1fr);gap:26px}}
+@media(max-width:360px){.project-card-image{margin:-20px -20px 22px}}

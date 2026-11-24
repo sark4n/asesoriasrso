@@ -20,6 +20,10 @@ export const projects = [
     related: 'erp-personalizado',
     relatedLabel: 'Conoce el servicio de ERP personalizados',
     contact: 'Hola RSO, vi el proyecto de ERP para una fábrica de puertas y me gustaría conversar sobre nuestra operación.',
+    images: [
+      { src: '/proyectos/erp-reportes.webp', width: 1009, height: 712, alt: 'Centro de informes del ERP industrial con opciones de análisis financiero', caption: 'Centro de reportes para consultar distintas áreas de la operación.' },
+      { src: '/proyectos/erp-cotizacion.webp', width: 1009, height: 712, alt: 'Formulario del ERP para crear una cotización con cliente, obra y productos', caption: 'Creación de cotizaciones. Formulario sin completar para proteger los datos de la empresa.' },
+    ],
     kind: 'Cliente · ERP industrial',
   },
   {
@@ -61,6 +65,11 @@ export const projects = [
     related: 'software-a-medida',
     relatedLabel: 'Conoce el servicio de software a medida',
     contact: 'Hola RSO, conocí Sarkan Vault y quiero conversar sobre el desarrollo de una aplicación.',
+    images: [
+      { src: '/proyectos/sarkan-vault-inicio.webp', width: 1366, height: 768, alt: 'Inicio de Sarkan Vault con juego destacado y últimas partidas', caption: 'Inicio con acceso al juego destacado y a la actividad reciente.' },
+      { src: '/proyectos/sarkan-vault-plataformas.webp', width: 1366, height: 768, alt: 'Selector visual de plataformas en la biblioteca de Sarkan Vault', caption: 'Navegación por plataformas. La compatibilidad depende del motor y de cada juego.' },
+      { src: '/proyectos/sarkan-vault-ficha.webp', width: 1366, height: 768, alt: 'Ficha de juego de Sarkan Vault con información y herramientas de preparación', caption: 'Ficha de juego con información, multimedia y herramientas de preparación.' },
+    ],
     kind: 'Proyecto propio · Aplicación de escritorio',
   },
 ];
